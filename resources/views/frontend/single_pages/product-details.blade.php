@@ -87,7 +87,6 @@
                                                 @foreach ($product_colors as $color )
                                                     <option value="{{ $color->color_id }}">{{ $color->color->name }}</option>
                                                 @endforeach
-                                                <option>Grey</option>
                                             </select>
                                             <div class="dropDownSelect2"></div>
                                             <font style="color:red" >{{  ($errors->has('color_id'))?($errors->first('color_id')):'' }}</font>

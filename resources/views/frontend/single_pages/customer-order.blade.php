@@ -35,7 +35,7 @@
                                <tr>
                                    <th>Order No</th>
                                    <th>Total Amount</th>
-                                   <th>Payment Type<th>
+                                   <th>Payment Type</th>
                                    <th>Status</th>
                                    <th>Action</th>
                                </tr>
@@ -44,7 +44,7 @@
                                @foreach ($orders as $order)
                                  <tr class="{{ $order->id }}">
                                    <td>{{ $order->order_no }}</td>
-                                   <td>{{ $order->order_total }}</td>
+                                   <td>{{ $order->order_total }}Tk</td>
                                    <td>
                                        {{ $order->payment->payment_method }}
                                        @if ($order->payment->payment_method == 'Bkash')
