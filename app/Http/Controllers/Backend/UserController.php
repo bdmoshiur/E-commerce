@@ -26,7 +26,7 @@ class UserController extends Controller
         $data->role = $request->role;
         $data->name = $request->name;
         $data->email = $request->email;
-        $data->password =bcrypt($request->password);
+        $data->password = bcrypt($request->password);
         $data->save();
 
         return redirect()->route('users.view')->with('success','Data Inserted Successfully');
