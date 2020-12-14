@@ -121,17 +121,18 @@ plugins/summernote/summernote-bs4.min.css">
     </a>
 
     <!-- Sidebar -->
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{ (!empty(Auth::user()->image)) ? url('upload/user_images/'.Auth::user()->image) : url('upload/no_image.png') }}" class="img-circle elevation-2" alt="User Image">
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+            <img src="{{ (!empty(Auth::user()->image)) ? url('upload/user_images/'.Auth::user()->image) : url('upload/no_image.png') }}" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+            <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+            </div>
         </div>
-        <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
-        </div>
-      </div>
 
-     @include('backend.layouts.sidebar')
+        @include('backend.layouts.sidebar')
 
     </div>
     <!-- /.sidebar -->
