@@ -9,22 +9,19 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public function view(){
+    public function view() {
         $id = Auth::User()->id;
         $user  = User::findOrfail($id);
         return view('backend.user.view-profile', compact('user'));
     }
 
-      public function edit(){
+      public function edit() {
         $id = Auth::User()->id;
         $editData  = User::findOrfail($id);
         return view('backend.user.edit-profile', compact('editData'));
     }
 
-
-
-
-    public function update(Request $request){
+    public function update(Request $request) {
         $data = User::findOrfail(Auth::User()->id);
         $data->name = $request->name;
         $data->email = $request->email;
@@ -48,7 +45,6 @@ class ProfileController extends Controller
         return view('backend.user.edit-password');
     }
 
-
     public function PasswordUpdate(Request $request){
         if(Auth::attempt(['id' =>Auth::user()->id, 'password' => $request->current_password])){
             $user = User::findOrfail(Auth::user()->id);
@@ -60,7 +56,5 @@ class ProfileController extends Controller
         }
 
     }
-
-
 
 }
