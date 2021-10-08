@@ -35,7 +35,6 @@
             <div class="card">
               <div class="card-header">
                     <h3>
-
                         @if (isset($editData))
                             Edit Product
                         @else
@@ -45,7 +44,7 @@
                     </h3>
               </div><!-- /.card-header -->
               <div class="card-body">
-                <form action="{{ (@$editData)?route('products.update',$editData->id):route('products.store') }}" method="post" id="myForm" enctype="multipart/form-data">
+                <form action="{{ (@$editData) ? route('products.update',$editData->id):route('products.store') }}" method="post" id="myForm" enctype="multipart/form-data">
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-4">
@@ -74,8 +73,8 @@
                         <div class="form-group col-md-6">
                             <label>Color</label>
                             <select name="color_id[]" class="form-control select2" multiple>
-                            @foreach ($colors as $color)
-                                <option value="{{ $color->id }}" {{ (@in_array(['color_id'=>$color->id],$color_array))?'selected':'' }}>{{ $color->name }}</option>
+                            @foreach ( $colors as $color)
+                                <option value="{{ $color->id }}" {{ (@$editData) ? (@in_array(['color_id'=>$color->id],$color_array))?'selected':'' : "" }}>{{ $color->name }}</option>
                             @endforeach
                             </select>
                             <font color="red">{{ ($errors->has('color_id'))?($errors->first('color_id')):'' }}</font>
@@ -83,8 +82,8 @@
                           <div class="form-group col-md-6">
                              <label>Size</label>
                             <select name="size_id[]" class="form-control select2" multiple>
-                            @foreach ($sizes as $size)
-                                <option value="{{ $size->id }}" {{ (@in_array(['size_id'=>$size->id],$size_array))?'selected':'' }}>{{ $size->name }}</option>
+                            @foreach ( $sizes as $size)
+                                <option value="{{ $size->id }}" {{ (@$editData) ? (@in_array(['size_id'=>$size->id],$size_array))?'selected':'' : "" }}>{{ $size->name }}</option>
                             @endforeach
                             </select>
                             <font size="red">{{ ($errors->has('size_id'))?($errors->first('size_id')):'' }}</font>
@@ -116,7 +115,7 @@
                             <input type="file" name="sub_image[]" class="form-control" multiple />
                         </div>
                     <div class="form-group col-md-12">
-                        <button type="submit" class="btn btn-primary">{{ (@$editData)? "Update":"Submit" }}</button>
+                        <button type="submit" class="btn btn-primary">{{ (@$editData) ? "Update":"Submit" }}</button>
                     </div>
                    </div>
                 </form>

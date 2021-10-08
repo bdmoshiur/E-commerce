@@ -20,8 +20,7 @@ use App\Http\Requests\ProductRequest;
 class ProductController extends Controller
 {
       public function view(){
-
-        $data['editData'] = Product::all();
+        $data['allData'] = Product::all();
         return view('backend.product.view-product',$data);
     }
 
@@ -74,7 +73,7 @@ class ProductController extends Controller
                 if(!empty($colors)){
                     foreach($colors as $color){
                         $mycolor = new ProductColor();
-                        $mycolor->product_id = $product->id;
+                        $mycolor->product_id = $product->id;;
                         $mycolor->color_id = $color;
                         $mycolor->save();
                     }
@@ -97,17 +96,15 @@ class ProductController extends Controller
         return redirect()->route('products.view')->with('success','Data Inserted Successfully');
     }
 
-
-
      public function edit($id){
             $data['editData'] = Product::findOrfail($id);
             $data['categories'] =  Category::all();
             $data['brands'] =  Brand::all();
             $data['colors'] =  Color::all();
-            $data['sizes'] =  Size::all();
+            $data['sizes']  =  Size::all();
             $data['color_array']  = ProductColor::select('color_id')->where('product_id', $data['editData']->id)->orderBy('id','asc')->get()->toArray();
             $data['size_array']   = ProductSize::select('size_id')->where('product_id', $data['editData']->id)->orderBy('id','asc')->get()->toArray();
-       return view('backend.product.add-product',$data);
+            return view('backend.product.add-product',$data);
 
     }
 

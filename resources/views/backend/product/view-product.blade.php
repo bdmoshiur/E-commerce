@@ -51,7 +51,7 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($editData as $key => $product)
+                      @foreach ($allData as $key => $product)
                     <tr>
                         <td>{{ $key+1 }}</td>
                         <td>{{ $product->category->name }}</td>
