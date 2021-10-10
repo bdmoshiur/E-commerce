@@ -92,7 +92,7 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-                    <form  method="POST" action="{{ route('login') }}">
+                    <form action="{{ route('login') }}"  method="POST">
                         @csrf
 
                         @if ($errors->any())
