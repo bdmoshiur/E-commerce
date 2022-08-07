@@ -8,8 +8,8 @@
 						Contact Us
 					</h4>
 					<p class="stext-107 cl7 hov-cl1 trans-04" style="font-size: 15px;">
-	                    Address: {{ $contact->address }}, &nbsp; Cell:  {{ $contact->mobile_no }}, &nbsp; Email:
-                        {{ $contact->email }}
+	                    Address: Dhaka, Bangladesh, &nbsp; Cell:  01828694935 , &nbsp; Email:
+                        50th-batch-g-b@gmail.com
 	                </p>
 				</div>
 
@@ -19,17 +19,17 @@
 					</h4>
 
 					<ul class="social">
-                        <li class="facebook"><a href="{{ $contact->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li class="twitter"><a href="{{ $contact->twiter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li class="google-plus"><a href="{{ $contact->google_plus }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="youtube"><a href="{{ $contact->youtube }}" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <li class="facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li class="twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li class="google-plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
                     </ul>
 				</div>
 			</div>
 
 			<div class="p-t-40">
 				<p class="stext-107 cl6 txt-center">
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script> @ Moshiur Rahman
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> Design and Development @ 50th batch G-B
 				</p>
 			</div>
 		</div>

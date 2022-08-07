@@ -8,18 +8,18 @@
                 <div class="left-top-bar">
                     <div class="left-top-bar">
                         <font size="3px" color="#fff">
-                            {{ $contact->mobile_no }} &nbsp;&nbsp;&nbsp;
-                            {{ $contact->email }}
+                            01828694935 &nbsp;&nbsp;&nbsp;
+                            50th-batch-g-b@gmail.com
                         </font>
                     </div>
                 </div>
 
                 <div class="right-top-bar flex-w h-full">
                     <ul class="social">
-                        <li class="facebook"><a href="{{ $contact->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li class="twitter"><a href="{{ $contact->twiter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li class="google-plus"><a href="{{ $contact->google_plus }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="youtube"><a href="{{ $contact->youtube }}" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <li class="facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li class="twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li class="google-plus"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
                     </ul>
                 </div>
             </div>

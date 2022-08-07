@@ -68,7 +68,7 @@
 							</span>
 
 							<p class="stext-115 cl6 size-213 p-t-18">
-								{{ $contact->address }}
+								Dhaka, Bangladesh
 							</p>
 						</div>
 					</div>
@@ -84,7 +84,7 @@
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								{{ $contact->mobile_no }}
+								01828694935
 							</p>
 						</div>
 					</div>
@@ -100,7 +100,7 @@
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								{{ $contact->email }}
+								50th-batch-g-b@gmail.com
 							</p>
 						</div>
 					</div>
