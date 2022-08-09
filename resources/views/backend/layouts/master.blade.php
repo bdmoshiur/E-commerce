@@ -165,10 +165,10 @@ plugins/summernote/summernote-bs4.min.css">
 
 
   <footer class="main-footer">
-    <strong>Copyright &copy; MosmoSoft</strong>
+    <strong>Copyright &copy; {{ date('Y') }}</strong>
 
     <div class="float-right d-none d-sm-inline-block">
-      <b>Designed & Development</b> Moshiur Rahman
+      <b>Designed & Development</b> 50th batch G-B
     </div>
   </footer>
 
